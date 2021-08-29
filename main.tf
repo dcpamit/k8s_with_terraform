@@ -1,10 +1,10 @@
 provider "google" {
-  credentials = file("crafty-centaur-323418-234ce57e133e.json")
-  project = "crafty-centaur-323418"
+  credentials = file("<privare-key>.json")
+  project = "<project-id>"
   region = "us-west1"
 }
 module "gcp_k8s_network" {
-  source = "./modules/k8s_network"
+  source = "./modules/k8s_infra"
   subnet_cidr = "10.240.0.0/24"
   pod_cidr = "10.200.0.0/16"
   svc_acct_id = "k8s-svc-acct"
