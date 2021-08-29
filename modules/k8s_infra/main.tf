@@ -62,6 +62,7 @@ locals {
 
   ])
 
+
  }
 
 resource "google_compute_instance" "default" {
@@ -71,7 +72,7 @@ resource "google_compute_instance" "default" {
   zone         = "us-west1-a"
   can_ip_forward = true
 
-  tags = var.tags
+  tags = ["k8s-network",split("-","${each.key}")[0]]
 
   boot_disk {
     initialize_params {

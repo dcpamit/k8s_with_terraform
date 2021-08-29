@@ -19,10 +19,6 @@ variable "image" {
     description = "GCP image=project/family"
     type = string
 }
-variable "tags" {
-    description = "VM Tags"
-    type = list(string)
-}
 variable "vm_list" {
     description = "VM Details"
     type = map(object({
