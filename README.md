@@ -1,1 +1,1 @@
-# k8s_with_terraform
+Terraform code for provisioning Kubernetes cluster infrastructure on GCP.
